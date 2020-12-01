@@ -13,8 +13,8 @@ jobs:
         with:
           base-url: https://ams.fortify.com
           tenant: ${{ secrets.FOD_TENANT }}
-          user: ${{ secrets.FOD_USER }}
-          password: ${{ secrets.FOD_PAT }}
+          user: ${{ secrets.FOD_KEY }}
+          password: ${{ secrets.FOD_SECRET }}
           release-id: ${{ secrets.FOD_RELEASE_ID }}
           outputDir: ./fpr
       - uses: fortify/gha-fpr-to-sarif@master
