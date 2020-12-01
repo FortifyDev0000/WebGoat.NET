@@ -13,6 +13,8 @@ jobs:
       - uses: microsoft/setup-msbuild@v1.0.0
         with:
           vs-version: 10.0
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       - uses: actions/setup-java@v1     # Required for ScanCentral Client and FoD Uploader
         with:
           java-version: 1.8
