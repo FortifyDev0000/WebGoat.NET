@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: fortify/gha-fod-generate-sarif@master
         with:
-          base-url: https://sandbox.fortify.com
+          base-url: https://sandbox.fortify.com/
           tenant: ${{ secrets.FOD_TENANT }}
           user: ${{ secrets.FOD_KEY }}
           password: ${{ secrets.FOD_SECRET }}
