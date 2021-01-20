@@ -22,7 +22,7 @@ jobs:
       - uses: fortify-actions/setup-fod-uploader@v1
       # Don't use this example; FoD currently does not support using the ScanCentral Package command to package .NET code
       - run: scancentral package -bt msbuild -bf WebGoat.NET.sln -o package.zip
-      - run: java -jar "$Env:FOD_UPLOAD_JAR" -z package.zip -aurl https://api.sandbox.fortify.com/ -purl https://sandbox.fortify.com/ -rid "$Env:FOD_RELEASE_ID" -tc "$Env:FOD_TENANT" -ac "$Env:FOD_USER" "$Env:FOD_PAT" -ep 2 -pp 1
+      - run: java -jar "$Env:FOD_UPLOAD_JAR" -z package.zip -aurl https://api.sandbox.fortify.com/ -purl https://sandbox.fortify.com/ -rid "$Env:FOD_RELEASE_ID" -tc "$Env:FOD_TENANT" -uc "$Env:FOD_USER" "$Env:FOD_PAT" -ep 2 -pp 1
         env: 
           FOD_TENANT: ${{ secrets.FOD_TENANT }}  
           FOD_USER: ${{ secrets.FOD_USER }}
